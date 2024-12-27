@@ -2,8 +2,7 @@ import Dog from "./components/Dog";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap'i projeye dahil ettik
-import Dog from './Dog'; // Dog componentini import ettik, buradaki Dog bileşenini kullanacağımızı varsayıyorum
+
 
 function App() {
   return (

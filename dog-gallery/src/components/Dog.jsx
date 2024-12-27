@@ -10,6 +10,7 @@ const Dog = ({name, img, color, isBlueEyed, age}) => {
        <img
          src={img}
          alt="dog"
+         width="300px"
        />
     </div>
   );

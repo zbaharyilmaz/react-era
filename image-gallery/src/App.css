@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h3 {
+  margin: 10px;
+  text-align: center;
+  color:blue;
+}
+.card-img {
+  object-fit: cover; /* Resmi kapsayıcıya uyacak şekilde keser */
+  height: 300px;  /* Fotoğrafın yüksekliğini sabitler */
+  transition: transform 0.3s ease-in-out;
+  padding: 1rem;
+}
+.card-img:hover {
+  transform: scale(1.1); 
+}
+.card-title{ 
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+
+

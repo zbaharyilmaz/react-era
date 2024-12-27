@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  background-color: rgb(203, 203, 188);
+  font-size: 2rem;
+}
+
+.hellopicture{
+  width: 50%;
+}

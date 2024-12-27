@@ -1,0 +1,13 @@
+.pclass1{
+    color:violet;
+}    
+/* Eğer index.css önce yüklenirse ve main.css daha sonra yüklenirse, main.css dosyasındaki yazı rengi kuralı geçerli olur. */
+.pclass2{
+    color:darkviolet;
+}
+.img{
+    width: 300px;
+    border-radius:10px;
+    margin:auto;
+    padding: 30px;
+}

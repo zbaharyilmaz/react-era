@@ -1,4 +1,4 @@
-# Project: Image Gallery
+# Image Gallery
 
 ## Description
 Project aims to create an image gallery app.

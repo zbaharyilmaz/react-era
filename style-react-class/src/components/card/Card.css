@@ -1,5 +1,16 @@
-.wrapper{
+/* .wrapper{
     text-align: center;
     background-color:black ;
     color: white;
-}
+}*/
+/* margin: 0 auto; width: 30%; div sayfada ortalanır.*/ 
+
+/*
+.images{
+    display: block; 
+    width: 300px;
+    margin: 1rem auto;
+    border-radius: 1rem;
+}  */
+
+/* div ya da img etiketine display: block; verildiğinde) öncesindeki öğeyi altına iter */

@@ -1,8 +1,9 @@
 .wrapper{
     text-align: center;
-    background-color:black ;
-    color: white;
-    /* margin: 0 auto; width: 30%; div sayfada ortalanır.*/ 
+    background-color: ;
+    color: green;
+     margin: 0 auto;
+     width: 30%; /* div sayfada ortalanır.*/ 
 }
 .images{
     display: block; /* <div> ya da img etiketine display: block; verildiğinde) öncesindeki öğeyi altına iter.*/

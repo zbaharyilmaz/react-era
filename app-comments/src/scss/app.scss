@@ -1,0 +1,11 @@
+@import "./reset";
+@import "./variables";
+
+body{
+    font-family: fantasy;
+    background-color: $beige;
+    text-align: center;
+}
+
+//* body stil özelliklerinin etkisini her bileşende görmek için, global stilleri html ve body elementlerine uygulamanız ve bileşenlerinize miras alma özelliklerini eklemeniz gerekmektedir.
+//* Spesifik stiller (Card bileşenindeki gibi) global stilleri geçebilir, bu yüzden global stillerle karışmaması için bileşenlere özgü stiller kullanmak önemlidir.

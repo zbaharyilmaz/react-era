@@ -1,7 +1,7 @@
 const data = [
     {
       id: 1,
-      name: "Ayşe yılmaz",
+      name: "Ayşe Yılmaz",
       job: "Developer",
       comment: "Uygulamayı çok beğendim...",
       img:"https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883334/person-1_rfzshl.jpg",
@@ -23,7 +23,7 @@ const data = [
     {
       id: 4,
       name: "Tayyar Baki",
-      job: "Stajer",
+      job: "Stajyer",
       comment: "Geliştirilmesi gerekiyor.",
       img: "https://images.unsplash.com/photo-1552058544-f2b08422138a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
     },

@@ -2,6 +2,7 @@ import Card from "./components/Card";
 import Header from "./components/Header";
 import "./scss/app.scss";
 import data from "./data";
+import Footer from "./components/Footer";
 
 function App() {
  //console.log(data)
@@ -14,7 +15,7 @@ function App() {
 
     */}
    {data.map((item)=>(<Card key={item.id} {...item}/>))}
-    
+    <Footer/>
     
     </div>
   );

@@ -1,0 +1,53 @@
+@use "variables" as *;  //!ÖNEMLİ @USE KULLANIMI:
+// Bu şekilde doğrudan değişkenlere erişebilirsiniz. Mesela; background-color: $olivegreen şeklinde ad alanı kullanılmadan yanivariables.$olivegreen yazmadan doğrudan değişkene erişim olacaktır.
+
+
+.container {
+    .card {
+        max-width: 350px;
+        box-shadow:8px 8px 25px rgba( 0,0,0,0.4);
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 2rem auto;
+        text-align: center;
+        line-height: 2rem;
+        background-color: $backgroundCard;
+    
+        h1{
+            color:$olivegreen;
+          
+        }
+        h3{
+            color:$darkGreen;
+        }
+        .img {
+            width: 200px;
+            border-radius: 50%;
+            margin: 1.5rem;
+        }
+        .buttons{
+         button{
+            border: none;
+            border-radius: 1rem;
+            margin: 0.6rem;
+            width: 70px;
+            padding:0.2rem;
+            font-family: inherit;
+            font-size: 1rem;
+            
+            &:hover{
+                cursor: pointer;
+                opacity: 0.5;
+            }  
+            }
+            .like{
+                background-color: $neon;
+            }
+            .dislike{
+                background-color: $navyBlue;
+                color: $neon;
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@use "variables" as *;
+
+.footer{
+    padding: 2rem;
+    background-color: $backgroundCard;
+    p{
+        font-size: small;
+    }
+}

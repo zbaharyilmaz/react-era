@@ -33,3 +33,20 @@ const Events=()=> {
 }
 
 export default Events;
+
+/* -------------------------------------------------------------------------- */
+//! message console'da guncellendigini ancak DOM'da guncellenmedigini gorduk.
+//* Bunun sebebi REACT'in aksi belirtilmedigi surece elementleri statik olarak kabul etmesinden kaynaklanir.
+
+//* React bunu DOM islemlerini minimize etmek icin yapmaktadir.
+//* REACT'a hangi elementleri interaktif oldugu belirtilmelidir.
+//* React'a elementlerin interaktif oldugunu belirtmek icin state'ler kullanilir.
+//! State, elementlerin degisiklik durumlarini tutan nesnelerdir.
+//? ReactJs'de state'leri kullanmak icin  2 ayri Component yapisi bulunmaktadir.
+//? 1. Hooks (Functional Components).
+//? 2. Statefull Classes (Class Components).
+
+//? Biz su ana kadar uygulamalarimizda Fonksiyonel Component'leri kullandik.
+//? Yaygin kullanim Fonksiyonel Component'lerdir.
+
+/* -------------------------------------------------------------------------- */

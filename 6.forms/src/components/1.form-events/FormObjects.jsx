@@ -6,6 +6,8 @@ const FormObject = () => {
 
   const handleInfo = (e) => setInfo({ ...info, [e.target.id]: e.target.value });
 
+  //* */ e.target.id: Bu, etkileşimde bulunan HTML elemanının id değerini alır. Örneğin, name, password, veya country. e.target.value: Bu, kullanıcının form elemanına girdiği değeri alır. Örneğin, kullanıcı name input'una yazarsa, bu yazılan değer alınır. Bu, spread operator (...info) ile mevcut info state'inin tüm değerlerini alır. Sonra, e.target.id'ye göre belirli bir alan (örn. name, password, country) güncellenir. Bu şekilde, sadece değiştirilmiş form alanı güncellenmiş olur, diğerleri korunur.
+
   const handleSubmit = (e) => {
     e.preventDefault(); //? submit eventi'nin doğal davranışını engelle
 

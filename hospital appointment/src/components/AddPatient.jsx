@@ -11,6 +11,7 @@ const AddPatient = () => {
           <input
             id="name"
             type="text"
+
            
           />
         </div>
@@ -25,7 +26,7 @@ const AddPatient = () => {
 
         <div>
           <button className="kayitBtn" type="submit">
-            <span>{ } </span> için kayıt oluştur
+            <span>{ } </span> Schedule the Appointment
           </button>
         </div>
       </form>

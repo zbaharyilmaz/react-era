@@ -29,15 +29,28 @@ const TutorialList = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th>id</th>
-            <td>title</td>
-            <td>description</td>
-            <td className="text-center text-nowrap">
-              <FaEdit size={20} type="button" className="me-2 text-warning" />
-              <AiFillDelete size={22} type="button" className="text-danger " />
-            </td>
-          </tr>
+          {tutorials.map((item) => {
+            const { id, title, description } = item;
+            return (
+              <tr key={id}>
+                <th>{id}</th>
+                <td>{title}</td>
+                <td>{description}</td>
+                <td className="text-center text-nowrap">
+                  <FaEdit
+                    size={20}
+                    type="button"
+                    className="me-2 text-warning"
+                  />
+                  <AiFillDelete
+                    size={22}
+                    type="button"
+                    className="text-danger "
+                  />
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

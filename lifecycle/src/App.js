@@ -7,8 +7,8 @@ function App() {
   return (
 
     <div className="container text-center mt-4">
-     <button className="btn btn-danger">Show</button>
-     <LifeCycleMethods/>
+     <button onClick={()=>setVisible(!visible)} className="btn btn-danger">{visible? "Hide" :"Show"}</button>
+     {visible && <LifeCycleMethods/>} 
     </div>
   );
 }

@@ -67,3 +67,6 @@ class LifeCycleMethods extends React.Component {
   }
 }
 export default LifeCycleMethods;
+
+
+console.clear();

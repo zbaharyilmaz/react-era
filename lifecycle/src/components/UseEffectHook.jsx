@@ -56,6 +56,17 @@ const UseEffectHook = () => {
     };
   }, []);
 
+
+  //!ÖZETLE 
+
+// Dependency array olmadan: Her renderda çalışır. DIDMOUNT DIDUPDATE
+
+// Boş dependency array: Sadece ilk renderdan sonra çalışır. DIDMOUNT
+
+// Belirli state veya props’a bağlı çalıştırma: Sadece bu bağımlılıklar değiştiğinde çalışır.  DIDMOUNT DIDUPDATE (değişkene göre)
+
+// Temizleme işlemleri: Bileşen unmount edilirken veya bağımlılıklardan biri değişmeden önce çalıştırılır.
+
   console.log("1-rendering");
   return (
     <div className="container text-center">

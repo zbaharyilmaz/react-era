@@ -1,38 +1,69 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playwrite+VN:wght@100..400&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
   text-align: center;
+  background-image: linear-gradient( 90.1deg,  rgba(8,81,98,1) 14.5%, rgba(198,231,249,1) 135.4% );
+  font-family: "Arsenal", serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-container{
+  width: fit-content;
+  margin:auto
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.images{
+  filter:grayscale(.8);
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 30px;
+}
+.images:hover {
+  transform: scale(1.03); 
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7); /* Hover sırasında gölge daha belirgin olur */
+}
+.photographer{
+  color: rgb(162, 61, 61);
+}
+button{
+  margin-bottom: 1rem;
+  margin-right: 0.4rem;
+  padding: .3rem;
+  border-radius: 10px;
+  background-color:  rgb(196, 198, 207);
+  font-family: "Arsenal", serif;
+  font-size: 1.04rem;
+}
+button:hover{
+  cursor: pointer;
+  background-color:  rgb(240, 241, 249);
+}
+h2, h3,h4{
+  margin: 1rem;
+}
+h2{
+  font-size: 1.8rem;
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem; /* Daha küçük font */
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .img-container {
+    width: 90%; /* Görsel genişliği mobilde daha küçük olur */
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    font-size: 1rem; /* Daha küçük düğme yazı boyutu */
+    padding: 0.3rem; /* Daha küçük düğme iç boşluğu */
+  }
+
+  h2, h3 {
+    font-size: 1rem; /* Başlıklar daha küçük olur */
   }
 }

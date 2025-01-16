@@ -9,8 +9,7 @@ border: 2px solid blue;
 
 
 export const LogoSSS = styled.img`
-background-color: orange;
-width: 300px;
+width: 100px;
 padding: 2rem 0;
 `;
 

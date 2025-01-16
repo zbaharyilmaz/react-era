@@ -1,23 +1,22 @@
 import React from 'react';
 import data from "../data";
+import CardSSS from './styles/CardSSS';
+import ImageSSS from './styles/ImageSSS';
 
 
 const Card = () => {
   return (
     <div>
     {data.map((item)=>(
-      <div> 
+      <CardSSS> 
         <div>
           <h2>{item.title}</h2>
           <p>{item.body}</p>
         </div>
-        <img src={`./images/${item.image}`} alt="" />
+        <ImageSSS src={`./images/${item.image}`} alt="" />
 
-      </div>
+      </CardSSS>
     ))}
-
-
-
     </div>
   )
 }

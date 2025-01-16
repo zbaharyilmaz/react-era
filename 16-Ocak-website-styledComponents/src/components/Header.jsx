@@ -1,22 +1,25 @@
 import React from 'react'
+import DisplaySSS from './styles/DisplaySSS'
+import ImageSSS, { LogoSSS } from './styles/ImageSSS'
+import ButtonSSS, { ButtonD } from './styles/ButonSSS'
 
 const Header = () => {
   return (
     <div>
-      <div>
-        <img src="./images/logo.png" alt="" />
+      <DisplaySSS>
+        <LogoSSS src="./images/logo.png" alt="" />
         <div>
-          <button>Take Courses</button>
-          <button>Talk with Mentor</button>
+          <ButtonSSS>Take Courses</ButtonSSS>
+          <ButtonSSS>Talk with Mentor</ButtonSSS>
         </div>
-      </div>
+      </DisplaySSS>
       <div>
       <h1>The IT Career Starts Here</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sequi expedita eveniet. Qui consequatur sit amet ut quia repudiandae minus!</p>
-      <button>Start Your New Career</button>
-      <button>Details</button>
+      <ButtonSSS>Start Your New Career</ButtonSSS>
+      <ButtonD>Details</ButtonD>
     </div>
-    <img src="./images/hero.jpg" alt="" />
+    <ImageSSS src="./images/hero.jpg" alt="" />
     </div>
    
   )

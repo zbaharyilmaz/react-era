@@ -7,6 +7,7 @@ const CardSSS = styled.div`
   gap: 2rem;
   padding: 60px;
   display: flex;
+  box-shadow: ${({theme})=>theme.shadow};
 `;
 
 export default CardSSS;

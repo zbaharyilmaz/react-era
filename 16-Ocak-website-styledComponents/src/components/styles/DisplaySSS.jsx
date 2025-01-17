@@ -5,7 +5,7 @@ background-color: #e2eeee;
 display: flex;
 justify-content: space-between;
 align-items: center;
-@media screen (max-width:762px){
+@media screen (max-width:({theme})=>theme.responsive){
 flex-direction:column;
 }
 `;

@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 
 const style = {
   responsive: "724px",
-  shadow: "0 10px 10px rgba(0,0,0,0.15)",
+  shadow: "0 10px 10px rgba(0,0,0,0.20)",
 };
 
 const App = () => {

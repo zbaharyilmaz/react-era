@@ -23,7 +23,7 @@ const Home = () => {
   getTutorials();
   return (
     <>
-      <AddTutorial
+      <AddTutorial/>
       <TutorialList />
     </>
   );

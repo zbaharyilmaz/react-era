@@ -1,0 +1,41 @@
+.container .card {
+  max-width: 350px;
+  box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 2rem;
+  background-color: #d9d891;
+}
+.container .card h1 {
+  color: #435605;
+}
+.container .card h3 {
+  color: #242d07;
+}
+.container .card .img {
+  width: 200px;
+  border-radius: 50%;
+  margin: 1.5rem;
+}
+.container .card .buttons button {
+  border: none;
+  border-radius: 1rem;
+  margin: 0.6rem;
+  width: 70px;
+  padding: 0.2rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.container .card .buttons button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+.container .card .buttons .like {
+  background-color: #969e57;
+}
+.container .card .buttons .dislike {
+  background-color: #031927;
+  color: #969e57;
+}/*# sourceMappingURL=card.module.css.map */

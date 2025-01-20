@@ -14,7 +14,6 @@ const TutorialList = () => {
       description: "JS library for UI design",
     },
   ];
-
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -30,7 +29,7 @@ const TutorialList = () => {
         </thead>
         <tbody>
           {tutorials.map((item) => {
-            const { id, title, description } = item;
+            const{id, title, description}=item
             return (
               <tr key={id}>
                 <th>{id}</th>

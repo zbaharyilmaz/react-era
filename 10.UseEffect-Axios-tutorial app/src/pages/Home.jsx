@@ -1,29 +1,32 @@
 import AddTutorial from "../components/AddTutorial";
 import TutorialList from "../components/TutorialList";
-import axios from "axios";
+import axios from "axios"; //!imp kısayol import için.
 
 const Home = () => {
-  // const getTutorials = () => {
-  //   const URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/";
+  //*THEN-CATCH ile (bu metotta callbackhell olabiliyor.)
+  //  const getTutorials=()=>{
+  //   const URL="https://tutorial-api.fullstack.clarusway.com/"
   //   axios
-  //     .get(URL)
-  //     .then((res) => console.log(res.data))
-  //     .catch((error) => console.log(error));
-  // };
+  //   .get(URL)
+  //   .then((response)=>console.log(response.data))
+  //   .catch((error) =>console.log(error))
+  //  }
+  //  getTutorials();
 
+  //* ASYNC AWAİT THEN CATCH (alternatif)
   const getTutorials = async () => {
-    const URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/";
+    const URL = "https://tutorial-api.fullstack.clarusway.com/";
     try {
-      const res = await axios.get(URL);
-      console.log(res);
+      const response = await axios.get(URL);
+      console.log(response);
     } catch (error) {
       console.log(error);
     }
   };
-  getTutorials();
+ getTutorials();
   return (
     <>
-      <AddTutorial/>
+      <AddTutorial />
       <TutorialList />
     </>
   );

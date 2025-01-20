@@ -3,25 +3,30 @@ import { useState } from "react";
 const AddTutorial = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(title, description);
-    // postTutorial({title,description})
+    e.preventDefault(); 
+    // submit in default davranışı önlenir.
+    //postTutorial(title, description)
+
+
   };
+
 
   return (
     <div className="container text-center mt-4">
       <h1 className="display-6 text-danger">Add Your Tutorial</h1>
+
+      {/* //! form içinde veya submit butonunda onSubmiti ifade edebiliriz. formda tanımlamayı seçtik burada.  */}
+
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title
           </label>
           <input
+            onChange={(e) => setTitle(e.target.value)}
             type="text"
             className="form-control"
-            onChange={(e) => setTitle(e.target.value)}
             id="title"
             placeholder="Enter your title"
             required
@@ -32,14 +37,15 @@ const AddTutorial = () => {
             Description
           </label>
           <input
+            onChange={(e) => setDescription(e.target.value)}
             type="text"
             className="form-control"
-            onChange={(e) => setDescription(e.target.value)}
             id="desc"
             placeholder="Enter your Description"
             required
           />
         </div>
+           {/* //! form içinde veya submit butonunda onSubmiti ifade edebiliriz.Yukarda formda tanımlamayı seçtik */}
         <button type="submit" className="btn btn-danger mb-4">
           Submit
         </button>

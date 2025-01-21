@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from 'axios'
 
 const AddTutorial = () => {
   const [title, setTitle] = useState("");
@@ -6,11 +7,17 @@ const AddTutorial = () => {
   const handleSubmit = (e) => {
     e.preventDefault(); 
     // submit in default davranışı önlenir.
-    //postTutorial(title, description)
-
-
+    postTutorial({title, description})
   };
 
+  const postTutorial=async(newTutorial)=>{
+    try {
+      await axios.post(process.env.REACT_APP_URL,newTutorial);
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <div className="container text-center mt-4">

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import axios from 'axios'
+import axios from 'axios';
 
-const AddTutorial = () => {
+const AddTutorial = ({getTutorials}) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const handleSubmit = (e) => {
@@ -13,9 +13,10 @@ const AddTutorial = () => {
   const postTutorial=async(newTutorial)=>{
     try {
       await axios.post(process.env.REACT_APP_URL,newTutorial);
-      
     } catch (error) {
       console.log(error);
+    } finally{
+      getTutorials();
     }
   }
 

@@ -1,9 +1,11 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import axios from "axios";
+import EditTutorial from "./EditTutorial";
+import { useState } from "react";
 
-const TutorialList = ({tutorials}) => {
-
-  //!mock data
+const TutorialList = ({ tutorials, getTutorials }) => {
+  //* mock data
   // const tutorials = [
   //   {
   //     id: 1,
@@ -16,6 +18,17 @@ const TutorialList = ({tutorials}) => {
   //     description: "JS library for UI design",
   //   },
   // ];
+
+  const [editData, setEditData] = useState("");
+  const deleteTutorials = async (id) => {
+    try {
+      await axios.delete(`${process.env.REACT_APP_URL}${id}/`);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getTutorials();
+    }
+  };
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -31,8 +44,7 @@ const TutorialList = ({tutorials}) => {
         </thead>
         <tbody>
           {tutorials?.map((item) => {
-              //? optional chaning kontrolü gerekli. cannot read properties hatası aldık konsolda.
-            const{id, title, description}=item
+            const { id, title, description } = item;
             return (
               <tr key={id}>
                 <th>{id}</th>
@@ -43,11 +55,15 @@ const TutorialList = ({tutorials}) => {
                     size={20}
                     type="button"
                     className="me-2 text-warning"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editModal"
+                    onClick={() => setEditData(item)}
                   />
                   <AiFillDelete
                     size={22}
                     type="button"
                     className="text-danger "
+                    onClick={() => deleteTutorials(id)}
                   />
                 </td>
               </tr>
@@ -55,6 +71,7 @@ const TutorialList = ({tutorials}) => {
           })}
         </tbody>
       </table>
+      <EditTutorial editData={editData} getTutorials={getTutorials} />
     </div>
   );
 };

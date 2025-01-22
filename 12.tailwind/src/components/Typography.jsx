@@ -1,34 +1,50 @@
+import React from "react";
 
 const Typography = () => {
   return (
     <div>
-        {/* Typography */}
-        <p className="text-sm">Typography</p>
-        <p className="text-xs text-amber-500">Typography</p>
-        <p className="text-fuchsia-600">Typography</p>
-        <p className="text-xlg">Typography</p>
-        <p className="text-5xl">Typography</p>
-        <h1 className="text-[60px]">Typography</h1>
-        <h1 className="text-[20px] text-lime-600">Typography</h1>
+      {/* //* Typography */}
+      <p className="text-sm">Typography</p>
+      <p className="text-lg">Typography</p>
+      <p className="text-xl">Typography</p>
+      <p className="text-2xl">Typography</p>
+      <p className="text-3xl">Typography</p>
+      <h1 className="text-4xl">Typography</h1>
+      <h2 className="text-3xl">Typography</h2>
+      <h3 className="text-2xl">Typography</h3>
+      <h3 className="text-[60px]">Typography</h3>
+      <h3 className="text-[4rem]">Typography</h3>
 
-        {/* Line Clamp */}
-        <article>
-            <p className="line-clamp-3
-            ">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo doloremque magnam minus quo assumenda repudiandae fuga quidem ipsam numquam suscipit hic, natus dolores ex, adipisci, exercitationem libero atque qui! Expedita alias quo, possimus dicta fugit, eaque reprehenderit nemo ullam vel mollitia, eos maxime. Nostrum id aspernatur, molestias similique consectetur qui ex perspiciatis eligendi illum voluptas iste possimus vero, maxime libero amet quisquam repellat illo non nobis voluptatibus fugit sed? Dolore facere fuga, unde tempora hic eveniet, laborum impedit minus commodi neque mollitia, laudantium est quidem ratione at. Repudiandae nostrum placeat pariatur a odit? Excepturi nihil quod aspernatur veritatis exercitationem tenetur!
-            </p>
-        </article>
-        <div>
-            <p className="font-bold">Hi, Tailwind. Yo are awesome.</p>
-            <p className="font-bold underline text-5xl text-green-950">Hi, Tailwind. Yo are awesome.</p>
-            <p className="font-bold lowercase text-5xl text-green-950">Hi, Tailwind. Yo are awesome.</p>
-            <p className="font-bold uppercase text-5xl text-green-950">Hi, Tailwind. Yo are awesome.</p>
-            <p className="font-bold uppercase text-green-950">Hi, Tailwind. Yo are awesome.</p>
-            <p className="font-bold uppercase text-[#000957]">Hi, Tailwind. Yo are awesome.</p>
-            <p className="font-bold uppercase bg-[#FFEB00]">Hi, Tailwind. Yo are awesome.</p>
-      
-        </div>
-
+      {/* //* Line Clamp */}
+      <article>
+        <p className="line-clamp-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum vero
+          harum modi labore architecto? Itaque et facere recusandae sint quae
+          inventore suscipit accusamus id alias qui? Consequuntur, sapiente.
+          Eius, delectus quisquam impedit quidem incidunt dolore facilis nobis?
+          Asperiores obcaecati doloremque aperiam molestiae soluta, voluptate
+          porro adipisci, id officiis modi amet aut ut alias incidunt vero non
+          maiores unde cupiditate ea autem quam labore vitae. Ea, ab! Voluptatum
+          temporibus quod blanditiis facere, autem maxime corrupti dolores
+          quisquam amet dolorum iusto iste repudiandae sint necessitatibus
+          consequatur perferendis molestias, delectus perspiciatis enim ad! Iste
+          neque quae esse, harum placeat impedit perspiciatis qui natus.
+        </p>
+      </article>
+      <div>
+        <p className="font-bold">Merhaba</p>
+        <p className="text-center">Merhaba</p>
+        <p className="underline">Merhaba</p>
+        <p className="line-through">Merhaba</p>
+        <p className="uppercase">Merhaba</p>
+        <p className="lowercase">Merhaba</p>
+        <p className="text-red-400">Merhaba</p>
+        <p className="text-red-950">Merhaba</p>
+        <p className="text-[#EFB036]">Merhaba</p>
+        <p className="text-[rgb(76,54,239)]">Merhaba</p>
+        <p className="bg-slate-500">Merhaba</p>
+        <p className="bg-[#36ef8c]">Merhaba</p>
+      </div>
     </div>
   );
 };

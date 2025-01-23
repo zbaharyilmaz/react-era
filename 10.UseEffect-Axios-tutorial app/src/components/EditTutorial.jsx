@@ -106,3 +106,4 @@ const EditTutorial = ({ editData, getTutorials }) => {
 };
 
 export default EditTutorial;
+

@@ -1,0 +1,33 @@
+@use '../../scss/variables';
+@use '../../scss/mixins';
+
+.header {
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 5rem;
+  h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    color: yellow;
+    font-family: monospace;
+  }
+  .btns {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 1rem;
+    @include mixins.flex(row, center, 1rem);
+    button {
+      padding: 1rem;
+      border-radius: 1rem;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 1s;
+      &:hover {
+        background-color: variables.$btnHoverColor;
+      }
+    }
+  }
+}

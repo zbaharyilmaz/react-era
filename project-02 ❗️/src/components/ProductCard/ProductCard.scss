@@ -1,0 +1,56 @@
+@use "sass:color";
+@use '../../scss/variables';
+@use '../../scss/mixins';
+
+.products-list {
+  @include mixins.flex(row, space-evenly, 2rem);
+  margin: 1rem;
+  .card {
+    width: 350px;
+    height: variables.$cardHeight;
+    position: relative;
+    overflow: hidden;
+    .price {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: variables.$cardBgColor;
+      color: variables.$cardColor;
+      padding: variables.$cardPadding;
+      font-size: 0.9rem;
+      border-radius: variables.$borderRadius;
+      z-index: 2;
+    }
+
+    img {
+      width: 100%;
+      height: variables.$cardHeight;
+      border-radius: variables.$borderRadius;
+      filter: sepia(100%);
+    }
+    &_over {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      background-color: variables.$cardBgColor;
+      color: color.adjust(variables.$cardColor, $lightness: -50%);
+      font-size: 1.2rem;
+      padding: variables.$cardPadding;
+      border-radius: variables.$borderRadius;
+      transform: translateX(100%);
+      transition: transform 0.7s;
+      height: 25%;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &:hover .card_over {
+      transform: translateX(0%);
+    }
+    &:hover img {
+      filter: none;
+    }
+  }
+}

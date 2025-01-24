@@ -1,5 +1,10 @@
+.carousel .carousel-indicators button{
+    background-color: red;
+}
+/* ?React bootstrap de göremediğim bir class'dı. inceleden ismini buldum ve stillendirdim.  Bootstrap ayarlamalarının react-bootstrap e gömülmesi söz konusu. */
 
-.carousel  .carousel-indicators button {
-background-color: red;
-
+.carousel .carousel-control-prev,.carousel .carousel-control-next {
+  background-color: rgb(242, 168, 168);
+  opacity: 0.1;
+  color: rgb(240, 184, 184);
 }

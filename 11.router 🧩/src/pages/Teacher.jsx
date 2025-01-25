@@ -28,7 +28,7 @@ const Teacher = () => {
             <div key={kisi.id} className="col-12 col-sm-6 col-md-4">
               {/* //!ÖNEMKİ: https://www.dicebear.com/styles/avataaars/ */}
               <img
-                src={`https://api.dicebear.com/9.x/lorelei-neutral/svg?seed=${kisi.id}`}
+                src={`https://api.dicebear.com/9.x/dylan/svg?seed=${kisi.id}`}
                 alt=""
              
               />

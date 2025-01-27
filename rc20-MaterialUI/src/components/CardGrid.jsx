@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
+import { Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Grid2, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 
 const CardGrid = () => {

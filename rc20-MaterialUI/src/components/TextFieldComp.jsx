@@ -1,6 +1,6 @@
  //!error yazabilir sadece.varsayılanı true. aslında error={true} demektir.
 
- import { Box, Container, FormControl, Input, InputAdornment, InputLabel, MenuItem, TextField, Typography } from '@mui/material'
+ import { Box, Container, FormControl, IconButton, Input, InputAdornment, InputLabel, MenuItem, OutlinedInput, TextField, Typography } from '@mui/material'
  import React, { useState } from 'react'
  import AccountCircle from "@mui/icons-material/AccountCircle";
  const TextFieldComp = () => {
@@ -96,6 +96,27 @@
              />
            </FormControl>
          </Box>
+         <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
+          <InputLabel htmlFor="outlined-adornment-password">
+            Password
+          </InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-password"
+            type=""
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label=""
+                 
+                  edge="end"
+                >
+                 
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
+          />
+        </FormControl>
        </Container>
      </div>
    );

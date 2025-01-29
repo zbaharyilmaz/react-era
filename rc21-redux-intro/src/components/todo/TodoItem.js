@@ -1,17 +1,20 @@
 import React from "react";
 import okLogo from "../../assets/ok.png";
 import deleteLogo from "../../assets/delete.png";
+import { useDispatch } from "react-redux";
+import { degistir, sil } from "../../redux/actions/todoActions";
 
-
-const TodoItem = ({a}) => {
-
+const TodoItem = ({ a }) => {
+  console.log(a);
+  
+  const dispatch=useDispatch()
 
   return (
     <div
       style={{
-       backgroundColor:a.completed? "green":"pink",
-       textDecoration:a.completed? "line-through":"none",     
-       borderRadius: "5px",
+        background: a.completed ? "lightgray" : "orange",
+        textDecoration: a.completed ? "line-through" : "none",
+        borderRadius: "5px",
       }}
       className="todo-list"
     >
@@ -22,8 +25,8 @@ const TodoItem = ({a}) => {
             src={okLogo}
             className="ok-logo"
             alt="ok logo"
-// onClick={()=>degistir()}
-      
+
+            onClick={()=>dispatch(degistir(a.task))}
           />
         </span>
         <span>
@@ -31,7 +34,7 @@ const TodoItem = ({a}) => {
             src={deleteLogo}
             className="delete-logo"
             alt="delete logo"
-     // onClick={()=>degistir()}
+             onClick={()=>dispatch(sil(a))}
           />
         </span>
       </div>

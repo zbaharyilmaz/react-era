@@ -1,17 +1,18 @@
-import React from 'react';
-import Home from './pages/Home';
+import React from "react";
+// import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Teacher from './pages/Teacher';
-import CourseCard from './pages/CourseCard';
-import ContactForm from './pages/ContactForm';
-import {Route, BrowserRouter as Router, Routes} from "react-router-dom"; 
-//! veya sadece BrowserRouter, güncel seçenek.
-import MyNavbar from "./components/MyNavbar";
+// import Teacher from './pages/Teacher';
+// import CourseCard from './pages/CourseCard';
+// import ContactForm from './pages/ContactForm';
+// import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
+// //! veya sadece BrowserRouter, güncel seçenek.
+// import MyNavbar from "./components/MyNavbar";
+import AppRouter from "./router/AppRouter";
 
 const App = () => {
   return (
     <div>
-      <Router>
+      {/* <Router>
       <MyNavbar/>
       <Routes>
       <Route path="/" element={<Home/>}/>
@@ -19,10 +20,10 @@ const App = () => {
       <Route path="/courses" element={<CourseCard/>}/>
       <Route path="/contact" element={<ContactForm/>}/>
       </Routes>
-      </Router>
-     
+      </Router> */}
+      <AppRouter />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

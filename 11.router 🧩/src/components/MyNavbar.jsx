@@ -10,7 +10,7 @@ const MyNavbar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-      <Link to="/">
+        <Link to="/">
           <img src={logo} alt="" />
         </Link>
 
@@ -61,7 +61,7 @@ const MyNavbar = () => {
               className="nav-link"
               to="/paths"
             >
-            Path
+              Path
             </NavLink>
 
             <a
@@ -71,12 +71,12 @@ const MyNavbar = () => {
             >
               Github
             </a>
-          {/* <Nav className="me-auto">
+            {/* <Nav className="me-auto">
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link"  to="/mentors">Mentors</Link>
                 <Link className="nav-link"  to="/courses">Courses</Link>
                 <Link className="nav-link"  to="/contact">Contact</Link> */}
-        </Nav>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>

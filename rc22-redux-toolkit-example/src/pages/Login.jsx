@@ -46,6 +46,7 @@ const Login = () => {
             label="Password"
             type="password"
             id="password"
+            onChange={(e) => (password=e.target.value)}
          
           />
 

@@ -4,9 +4,6 @@ import { Container, Grid2, CircularProgress } from '@mui/material';
 
 const Home = () => {
 
-
-
-
   return (
     <div>
       <Container>

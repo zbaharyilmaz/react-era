@@ -9,7 +9,8 @@ import Teacher from "../pages/Teacher";
 import NotFound from "../pages/NotFound";
 import Paths from "../pages/Paths";
 //! NOT: ANAYOL OLD. EXACT OLARAK BELİRT.
-//* "/" (ana yol) tüm yollara dahil edilmiştir, bu nedenle onu "/" ile başlayan diğer yollardan ayırt etmek için exact anahtar kelimesine sahip olması gerekir . "/courses/:name" böyle bir yolda yani  :name belirtilen kısım bir değişkendir, mesela name=HTML gibi. bunun için : kullanılır
+//* "/" (ana yol) tüm yollara dahil edilmiştir, bu nedenle onu "/" ile başlayan diğer yollardan ayırt etmek için exact anahtar kelimesine sahip olması gerekir . "/courses/:name" böyle bir yolda yani  :name belirtilen kısım bir değişkendir, mesela name=HTML gibi. bunun için : kullanılır.
+import CardDetails from "../pages/CardDetails";
 
 const AppRouter = () => {
   return (
@@ -23,6 +24,7 @@ const AppRouter = () => {
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/paths" element={<Paths />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/course/:name" element={CardDetails}/>
         </Routes>
       </Router>
     </div>

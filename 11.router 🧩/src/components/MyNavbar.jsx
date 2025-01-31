@@ -1,11 +1,8 @@
-import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom";
-import logo from "../img/logo.png";
-
-//!!!React ta 3 türlü link kullanılabilir. NavLink, Link veya a etiketi. React uygulamanız içinde, etkinken stil gerektirmeyen bir bağlantı oluşturmak istiyorsanız, Link bileşenini kullanın. React uygulamanız içinde, etkin durumdayken stil gerektiren bir bağlantı oluşturmak istiyorsanız, NavLink bileşenini kullanın. React uygulamanızda harici bir sayfaya veya rota olmayan bir sayfaya bağlantı oluşturmak istiyorsanız, a  etiketini kullanın.
-
+import React from 'react'
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
+import logo from "../img/logo.png"
+//!!!React ta 3 türlü link kullanılabilir. NavLink Link ve a etiketi.hangisini ne zaman kullanmalısınız? React uygulamanız içinde, etkinken stil gerektirmeyen bir bağlantı oluşturmak istiyorsanız, Link bileşenini kullanın. React uygulamanız içinde, etkin durumdayken stil gerektiren bir bağlantı oluşturmak istiyorsanız, NavLink bileşenini kullanın. Son olarak, React uygulamanızda harici bir sayfaya veya rota olmayan bir sayfaya bağlantı oluşturmak istiyorsanız, <a></a>  etiketini kullanın.
 const MyNavbar = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -61,7 +58,7 @@ const MyNavbar = () => {
               className="nav-link"
               to="/paths"
             >
-              Path
+            Path
             </NavLink>
 
             <a
@@ -71,16 +68,11 @@ const MyNavbar = () => {
             >
               Github
             </a>
-            {/* <Nav className="me-auto">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link"  to="/mentors">Mentors</Link>
-                <Link className="nav-link"  to="/courses">Courses</Link>
-                <Link className="nav-link"  to="/contact">Contact</Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-};
+}
 
-export default MyNavbar;
+export default MyNavbar

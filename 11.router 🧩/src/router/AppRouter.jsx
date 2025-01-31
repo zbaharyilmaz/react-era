@@ -18,13 +18,15 @@ const AppRouter = () => {
       <Router>
         <MyNavbar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/mentors" element={<Teacher />} />
-          <Route path="/courses" element={<CourseCard />} />
-          <Route path="/contact" element={<ContactForm />} />
-          <Route path="/paths" element={<Paths />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/course/:name" element={CardDetails}/>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/teacher" element={<Teacher />} />
+        <Route path="" element={<ContactForm />} />
+
+        {/* Path route'nun içersinde başka alt route'lar olabilir */}
+        <Route path="/paths" element={<Paths />}/>
+        <Route path="/courses" element={<CourseCard />} />
+        <Route path="/courses/:namee" element={<CardDetails />} />
+        <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </div>

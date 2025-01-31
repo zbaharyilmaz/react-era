@@ -6,7 +6,7 @@ const CardDetails = () => {
 //! 1.yol
 
 // const {namee} =useParams()
-// console.log(name);//JAVASCRIPT
+// console.log(namee);//JAVASCRIPT
 
 //! 2.yol
 const {state:{a}}=useLocation()

@@ -1,7 +1,12 @@
 import CategoryBar from '../components/CategoryBar';
 import ProductCard from '../components/ProductCard';
+import { Container, Grid2, CircularProgress } from '@mui/material';
 
 const Home = () => {
+
+
+
+
   return (
     <div>
       <Container>

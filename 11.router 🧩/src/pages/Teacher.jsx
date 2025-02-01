@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 //! lifeCycle - useEffect teki UseEffectAxios.jsx componenti
 const Teacher = () => {
+  const navigate=useNavigate()
   const [people, setPeople] = useState([]);
 
 
@@ -30,6 +32,7 @@ const Teacher = () => {
               <img
                 src={`https://api.dicebear.com/9.x/dylan/svg?seed=${kisi.id}`}
                 alt=""
+                onClick={()=>navigate(`/teacher/${kisi.id}`,{state:{kisi}})}
              
               />
               <h5>{kisi.name}</h5>

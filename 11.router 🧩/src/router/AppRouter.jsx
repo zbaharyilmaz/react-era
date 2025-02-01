@@ -8,6 +8,7 @@ import Home from "../pages/Home";
 import Teacher from "../pages/Teacher";
 import NotFound from "../pages/NotFound";
 import Paths from "../pages/Paths";
+import TeacherDetails from "../pages/TeacherDetails";
 //! NOT: ANAYOL OLD. EXACT OLARAK BELİRT.
 //* "/" (ana yol) tüm yollara dahil edilmiştir, bu nedenle onu "/" ile başlayan diğer yollardan ayırt etmek için exact anahtar kelimesine sahip olması gerekir . "/courses/:name" böyle bir yolda yani  :name belirtilen kısım bir değişkendir, mesela name=HTML gibi. bunun için : kullanılır.
 import CardDetails from "../pages/CardDetails";
@@ -20,6 +21,7 @@ const AppRouter = () => {
         <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/teacher" element={<Teacher />} />
+        <Route path="/teacher/:id" element={<TeacherDetails />} />
         <Route path="" element={<ContactForm />} />
 
         {/* Path route'nun içersinde başka alt route'lar olabilir */}

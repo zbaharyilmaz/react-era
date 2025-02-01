@@ -9,9 +9,11 @@ import Teacher from "../pages/Teacher";
 import NotFound from "../pages/NotFound";
 import Paths from "../pages/Paths";
 import TeacherDetails from "../pages/TeacherDetails";
+import PrivateRouter from "./PrivateRouter";
 //! NOT: ANAYOL OLD. EXACT OLARAK BELİRT.
 //* "/" (ana yol) tüm yollara dahil edilmiştir, bu nedenle onu "/" ile başlayan diğer yollardan ayırt etmek için exact anahtar kelimesine sahip olması gerekir . "/courses/:name" böyle bir yolda yani  :name belirtilen kısım bir değişkendir, mesela name=HTML gibi. bunun için : kullanılır.
 import CardDetails from "../pages/CardDetails";
+import Login from "../pages/Login";
 
 const AppRouter = () => {
   return (
@@ -22,12 +24,19 @@ const AppRouter = () => {
         <Route exact path="/" element={<Home />} />
         <Route path="/teacher" element={<Teacher />} />
         <Route path="/teacher/:id" element={<TeacherDetails />} />
-        <Route path="" element={<ContactForm />} />
-        {/* Path route'nun içersinde başka alt route'lar olabilir */}
+
+        {/* //? Path route'nun içersinde başka alt route'lar olabilir */}
+        
+        {/* //!PRIVATE ROUTER: şifre kontrolü ile girilebilecek sayfalar için PrivateRouter a yönlendirdir. Açmalı kapamalı Route tag ı açtık. Önce PrivateRouter a gitme şartı, sonra ContactForm tag ı yönlendirmesi yaptık.*/}
+        <Route path="/contact" element={<PrivateRouter />}>
+          <Route path="" element={<ContactForm />} />
+        </Route>
+
         <Route path="/paths" element={<Paths />}/>
         <Route path="/courses" element={<CourseCard />} />
         <Route path="/courses/:names" element={<CardDetails />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/login" elemet={<Login/>} />
         </Routes>
       </Router>
     </div>

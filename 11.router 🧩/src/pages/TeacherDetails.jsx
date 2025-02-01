@@ -12,7 +12,7 @@ const TeacherDetails = () => {
      fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
   .then((res)=>res.json())
   .then((veri)=>setKisi(veri))
-  },[])
+  },[id])
  
 
   return (

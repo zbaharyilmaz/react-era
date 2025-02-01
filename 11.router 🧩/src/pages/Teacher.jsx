@@ -32,7 +32,8 @@ const Teacher = () => {
               <img
                 src={`https://api.dicebear.com/9.x/dylan/svg?seed=${kisi.id}`}
                 alt=""
-                onClick={()=>navigate(`/teacher/${kisi.id}`,{state:{kisi}})}
+                // onClick={()=>navigate(`/teacher/${kisi.id}`,{state:{kisi}})}
+                onClick={()=>navigate(`/teacher/${kisi.id}`)}
              
               />
               <h5>{kisi.name}</h5>

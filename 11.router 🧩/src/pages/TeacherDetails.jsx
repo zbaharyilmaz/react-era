@@ -1,9 +1,19 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useLocation, useParams } from 'react-router-dom'
 
 const TeacherDetails = () => {
 
-  const {state:{kisi}}=useLocation()
+  //!KISA YOL: const {state:{kisi}}=useLocation()
+  //* UZUN YOL
+  const {id}=useParams()
+  const [kisi,setKisi]=useState({})
+
+  useEffect(()=>{
+     fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+  .then((res)=>res.json())
+  .then((veri)=>setKisi(veri))
+  },[])
+ 
 
   return (
   

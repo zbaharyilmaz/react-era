@@ -5,8 +5,8 @@ import { useLocation } from 'react-router-dom';
 const CardDetails = () => {
 //! 1.yol
 
-// const {namee} =useParams()
-// console.log(namee);//JAVASCRIPT
+// const {names} =useParams()
+// console.log(names);//JAVASCRIPT
 
 //! 2.yol
 const {state:{a}}=useLocation()
@@ -17,7 +17,7 @@ console.log(a);
     <div className="container text-center mt-4">
       {/* {data.map(
         (a) =>
-          a.name === namee && ( */}
+          a.name === names && ( */}
             <div>
               <h3>{a.name}</h3>
               <img src={a.img} alt="" width="300px" />

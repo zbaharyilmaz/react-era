@@ -10,6 +10,8 @@ import NotFound from "../pages/NotFound";
 import Paths from "../pages/Paths";
 import TeacherDetails from "../pages/TeacherDetails";
 import PrivateRouter from "./PrivateRouter";
+import FS from "../pages/FS";
+import AWS from "../pages/AWS";
 //! NOT: ANAYOL OLD. EXACT OLARAK BELİRT.
 //* "/" (ana yol) tüm yollara dahil edilmiştir, bu nedenle onu "/" ile başlayan diğer yollardan ayırt etmek için exact anahtar kelimesine sahip olması gerekir . "/courses/:name" böyle bir yolda yani  :name belirtilen kısım bir değişkendir, mesela name=HTML gibi. bunun için : kullanılır.
 import CardDetails from "../pages/CardDetails";
@@ -32,7 +34,12 @@ const AppRouter = () => {
           <Route path="" element={<ContactForm />} />
         </Route>
 
-        <Route path="/paths" element={<Paths />}/>
+        <Route path="/paths" element={<Paths />}>
+        <Route path="/paths/fs" element={<FS/>} />
+     
+        <Route path="/paths/aws" element={<AWS/>} />
+        </Route>
+
         <Route path="/courses" element={<CourseCard />} />
         <Route path="/courses/:names" element={<CardDetails />} />
         <Route path="*" element={<NotFound />} />

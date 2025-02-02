@@ -9,9 +9,8 @@ const App = () => {
 
 
   return (
-    <KullaniciProvider>
       <GosterUsers />
-    </KullaniciProvider>
+
   );
 }
 

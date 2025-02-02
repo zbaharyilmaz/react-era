@@ -4,12 +4,12 @@ import OgrenciItem from './OgrenciItem';
 const OgrenciList = () => {
   return (
     <div>
-      <img
+      {/* <img
         src="https://cdn.pixabay.com/photo/2014/11/23/18/12/school-543041_1280.jpg"
         alt=""
-      />
-      <h2 style={{ textAlign: "center" }}>
-        My Students
+      /> */}
+      <h2 style={{ textAlign: "center", fontFamily:"Caveat"}}> 
+        Teacher Zeynep's Students
       </h2>
 
       <OgrenciItem />

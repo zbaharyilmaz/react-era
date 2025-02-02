@@ -6,25 +6,18 @@ const Isimler = () => {
   const { users } = useContext(UserContext);
 
   return (
-    <div>
+  
+    <div style={{textAlign:"center",fontFamily:"Caveat", fontSize:"1.5rem", margin:"10px", padding:"10px", borderRadius:"10px"}}>
       {users.slice(0, 4).map((a) => (
-        <div
-          style={{
-            textAlign: "center",
-            backgroundColor: "gold",
-            fontFamily: "Caveat",
-            fontSize: "1.5rem",
-            margin: "10px",
-            padding: "10px",
-            borderRadius: "10px",
-          }}
-          key={a.id}
-        >
+        <li key={a.id}>
           {a.login}
-          <AnaUser />
-          {/* <AnaUser  users={users}/> PROPS KULLNILABİLİR. */}
-        </div>
+          
+          {/* <AnaUser  users={users}/> PROPS KULLANILABİLİR. */}
+      </li>
+       
+
       ))}
+        <AnaUser />
     </div>
   );
 };

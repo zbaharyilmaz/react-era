@@ -1,26 +1,19 @@
-import { useContext } from "react"
-import { KullaniciContext } from "../context/KullaniciProvider"
-
-// import { useUserCntxt } from "../context/KullaniciProvider";
-
 
 
 const AnaUser = () => {
 
-const {users,changeWidth}=useContext(KullaniciContext)
 
-// const {users,changeWidth}=useUserCntxt()//!2. yoldan consuming
 
   return (
     <div>
-      {users.map((a) => (
+
         <div>
           <h3>
-            {a.login}
+            {}
           </h3>
 
-          <img src={a.avatar_url} alt="" 
-            width={a.width}
+          <img src={} alt="" 
+            width={}
           />
 
           <div>
@@ -30,7 +23,7 @@ const {users,changeWidth}=useContext(KullaniciContext)
              />
           </div>
         </div>
-      ))}
+
     </div>
   );
 }

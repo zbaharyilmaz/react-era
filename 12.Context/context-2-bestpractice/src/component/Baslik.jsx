@@ -3,7 +3,7 @@ import React from 'react'
 const Baslik = () => {
   return (
     <div>
-        <h1> İNSANLARIN İSİMLERİ </h1>
+        <h2 style={{textAlign:"center", fontFamily:"Caveat"}}>USER RANKS</h2>
     </div>
   )
 }

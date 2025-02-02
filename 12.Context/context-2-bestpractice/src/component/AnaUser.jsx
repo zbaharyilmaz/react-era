@@ -1,8 +1,9 @@
+import { useContext } from "react";
 
 
 const AnaUser = () => {
 
-
+const {users}= useContext(UserContext)
 
   return (
     <div>

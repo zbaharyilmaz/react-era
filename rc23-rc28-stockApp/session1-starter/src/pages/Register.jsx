@@ -9,8 +9,37 @@ import { Box, Button, TextField } from "@mui/material";
 import AuthHeader from "../components/AuthHeader";
 import AuthImage from "../components/AuthImage";
 import { Formik } from "formik";
+import * as Yup from "yup";
+
 
 const Register = () => {
+
+  const SignupSchema = Yup.object().shape({
+    firstName: Yup.string()
+      .min(2, 'Minimum 5 character')
+      .max(50, 'Maximum 50 character')
+      .required('Required'),
+
+    lastName: Yup.string()
+      .min(2, 'Minimum 5 character')
+      .max(50, 'Maximum 50 character')
+      .required('Required'),
+
+    userName: Yup.string()
+      .min(2, 'Minimum 5 character')
+      .max(50, 'Maximum 50 character')
+      .required('Required'),
+
+    email: Yup.string().email('Invalid email').required('Required'),
+
+    password: Yup.string().min(8, "Minimum 8 character")
+    .matches(/[a-z]/,"Password must contain lowercase characters.")
+    .matches(/[A-Z]/,"Password must contain uppercase characters.")
+    .matches(/\+d/,"Password must contain a numeric value.")
+    .matches(/[@$?!%&*]+/,"Password must contain uppercase characters(@$?!%&*).")
+  });
+
+
   return (
     <Container maxWidth="lg">
       <Grid
@@ -53,7 +82,7 @@ const Register = () => {
               email: "",
               password: "",
             }}
-            validate={{}}
+            validateSchema={SignupSchema}
             onSubmit={{}}
           >
             {({

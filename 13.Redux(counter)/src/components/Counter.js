@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./Counter.css";
-import {arttır, sıfırla,azalt } from '../../redux/actions/counterActions'
+import {arttır, sıfırla,azalt } from '../redux/actions/counterActions'
 
 const Counter = () => {
 

@@ -86,7 +86,9 @@ const Register = () => {
               password: "",
             }}
             validationSchema={SignupSchema}
-            onSubmit={{}}
+            onSubmit={(values)=>{
+              console.log(values);
+            }}
             component={(props)=>(<RegisterForm {...props}/>)}
           >
             {/* //!!AYRI BİR COMPONENT OLARAK YAZDIK BURAYI.

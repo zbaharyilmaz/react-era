@@ -5,11 +5,13 @@ import LockIcon from "@mui/icons-material/Lock";
 import image from "../assets/regi.avif";
 import Grid from "@mui/material/Grid";
 import { Link } from "react-router-dom";
-import { Box, Button, TextField } from "@mui/material";
+//!! RegisterForm Componentine taşı:  import { Box, Button, TextField } from "@mui/material";
 import AuthHeader from "../components/AuthHeader";
 import AuthImage from "../components/AuthImage";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import {Box} from "@mui/material"
+import RegisterForm from "../components/RegisterForm";
 
 
 const Register = () => {
@@ -37,6 +39,7 @@ const Register = () => {
     .matches(/[A-Z]/,"Password must contain uppercase characters.")
     .matches(/\+d/,"Password must contain a numeric value.")
     .matches(/[@$?!%&*]+/,"Password must contain uppercase characters(@$?!%&*).")
+    .required('Required'),
   });
 
 
@@ -82,9 +85,11 @@ const Register = () => {
               email: "",
               password: "",
             }}
-            validateSchema={SignupSchema}
+            validationSchema={SignupSchema}
             onSubmit={{}}
+            component={(props)=>(<RegisterForm {...props}/>)}
           >
+            {/* //!!AYRI BİR COMPONENT OLARAK YAZDIK BURAYI.
             {({
               values,
               errors,
@@ -94,7 +99,7 @@ const Register = () => {
               handleSubmit,
               isSubmitting,
             }) => (
-              <form action="">
+              <form onSubmit={handleSubmit}>
                 <TextField
                   name="userName"
                   label="Username"
@@ -165,8 +170,8 @@ const Register = () => {
                 >SUBMIT
                 </Button>
               </form>
-            )}
-          </Formik>
+            )} */}
+         </Formik>
 
           <Box sx={{ textAlign: "center", mt: 2, color: "secondary.main" }}>
             <Link to="/">Already have an account? Sign in</Link>

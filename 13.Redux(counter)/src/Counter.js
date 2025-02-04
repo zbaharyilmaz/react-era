@@ -6,8 +6,8 @@ const Counter = () => {
 
   return (
     <div className="app">
-      <h2 className="counter-header"> Counter with Redux</h2>
-      <h1>{s} </h1>
+      <h2 className="counter-header">PRAYER COUNTER</h2>
+      <h1>{} </h1>
       {/* sayac */}
       <h2>{} </h2>
       {/* text1 */}

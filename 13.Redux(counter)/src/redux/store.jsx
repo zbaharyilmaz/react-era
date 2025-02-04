@@ -1,12 +1,15 @@
 
-//? import { legacy_createStore as createStore} from 'redux' 
-import { combineReducers, legacy_createStore } from 'redux'
+//! import { legacy_createStore as createStore} from 'redux' 
+//& Eğer birden fazla reducer tanımlayacaksam;
+// const rootReducer = combineReducers({
+//counter: counterReducer,
+//user: userReducer });
+//export const store = createStore(rootReducer);
+
+import {legacy_createStore as createStore} from 'redux'
 import { counterReducer } from './reducers/counterReducer'
 
-const counterReducer =combineReducers({
 
-    counterR=counterReducer //zarfdışı-zarfiçi
 
-})
+export const store =createStore(counterReducer)
 
-export const store = legacy_createStore(counterReducer)

@@ -14,7 +14,7 @@ const Header = () => {
         </div>
       </DisplaySSS>
       <div>
-      <h1>Discover Deals</h1>
+      <h1>Discover Meals</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sequi expedita eveniet. Qui consequatur sit amet ut quia repudiandae minus!</p>
       <ButtonSSS>Today's Specials</ButtonSSS>
       <ButtonD>Contact Us</ButtonD>

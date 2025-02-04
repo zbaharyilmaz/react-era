@@ -1,5 +1,6 @@
 import React from 'react'
-import Counter from './components/Counter'
+import Counter from './components/counter/Counter'
+import Todo from "./components/todo/Todo";
 import "./App.css";
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
@@ -8,8 +9,8 @@ const App = () => {
   return (
     <div className="app">
       <Provider store={store}>
-      <Counter /> 
-        
+        <Counter /> 
+        {/* <Todo/> */}
       </Provider>
     </div>
   );

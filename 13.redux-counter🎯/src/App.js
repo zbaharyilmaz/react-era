@@ -8,8 +8,7 @@ const App = () => {
   return (
     <div className="app">
       <Provider store={store}>
-      <Counter /> 
-        
+        <Counter /> 
       </Provider>
     </div>
   );

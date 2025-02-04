@@ -13,11 +13,11 @@
 }
 
 .positive {
-  background-color: green;
-  color: white;
+  background-color: rgb(34, 238, 34);
+
 }
 
 .negative {
-  background-color: red;
-  color: white;
+  background-color: rgb(223, 51, 225);
+ 
 }

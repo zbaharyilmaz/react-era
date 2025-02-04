@@ -1,7 +1,7 @@
 
 //mutfak
 
-const counterReducer = (state={sayac:0,text1:"başlıyor"}, {type,payload1} ) => {
+const counterReducer = (state={sayac:0,text1:""}, {type,payload1} ) => {
   // console.log(type,payload1);
   
   switch (type) {

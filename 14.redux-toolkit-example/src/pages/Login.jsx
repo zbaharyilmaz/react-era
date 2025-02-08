@@ -35,7 +35,7 @@ const Login = () => {
             name="email"
             autoComplete="email"
             autoFocus
-            onChange={(e) => (email=e.target.value)}
+          
           
           />
           <TextField
@@ -46,7 +46,7 @@ const Login = () => {
             label="Password"
             type="password"
             id="password"
-            onChange={(e) => (password=e.target.value)}
+          
          
           />
 

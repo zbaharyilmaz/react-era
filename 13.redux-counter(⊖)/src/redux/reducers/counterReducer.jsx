@@ -2,7 +2,8 @@
 //mutfak
 
 const counterReducer = (state={sayac:0,text1:""}, {type,payload1} ) => {
-  // console.log(type,payload1);
+console.log(type, state.text1);
+console.log(state.sayac);
   
   switch (type) {
     case "INCREASE":

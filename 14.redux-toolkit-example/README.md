@@ -10,8 +10,10 @@ npm install veya yarn
 
 - `@reduxjs/toolkit`
 - `react-redux`
+
 - `axios`
 - `react-router-dom`
+
 - `@mui/material-ui`
 - `@emotion/react`
 - `@emotion/styled`

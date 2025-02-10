@@ -1,13 +1,16 @@
 import AppRouter from "./router/AppRouter";
 import { Provider } from "react-redux";
-import { store } from "./app/store";
+import {store} from "./app/store";
+
 
 function App() {
   return (
     <div>
-      <Provider store={store}>
-        <AppRouter />
+      <Provider store={store}>  
+         {/* //! Bu prop, Provider bileşenine Redux store'unu iletmek için kullanılır. İlk store prop'un adıdır, ikinci store ise import ettiğiniz Redux store'un kendisidir. */}
+     <AppRouter />    
       </Provider>
+   
     </div>
   );
 }

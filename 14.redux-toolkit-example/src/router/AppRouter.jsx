@@ -9,8 +9,8 @@ const AppRouter = () => {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<News/>} />
-        <Route path="/login" element={<Login/>} />
+      <Route path="/" element={<News/>}/>
+      <Route parh="/login" element={<Login/>}/>
       </Routes>
     </BrowserRouter>
   );

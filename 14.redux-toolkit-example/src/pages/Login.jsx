@@ -11,9 +11,11 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { kullaniciOlustur } from "../features/yetkiSlice";
 import { useNavigate } from "react-router-dom";
+import { yetkiSlice } from "../features/yetkiSlice";
 
 const Login = () => {
-  const { email, password } = useSelector((state) => state.yetkiSlice || { email: '', password: '' });
+ let { email, password } = useSelector((state) => state.yetkiSlice);
+
   const navigate=useNavigate();
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
@@ -29,7 +31,6 @@ const Login = () => {
   return (
     <Container component="main" maxWidth="xs">
       <Box
-        onSubmit={handleSubmit}
         sx={{
           marginTop: 8,
           display: "flex",

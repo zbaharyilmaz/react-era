@@ -1,12 +1,35 @@
-import React from 'react'
-import {Avatar, Box, Button, Container, Link, TextField, Typography} from "@mui/material";
+import React from "react";
+import {
+  Avatar,
+  Box,
+  Button,
+  Container,
+  Link,
+  TextField,
+  Typography,
+} from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { kullaniciOlustur } from "../features/yetkiSlice";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-
+  const { email, password } = useSelector((state) => state.yetkiSlice || { email: '', password: '' });
+  const navigate=useNavigate();
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+   dispatch(kullaniciOlustur({email, password}))
+    // payload ifadesi, dışarıdan gelen veriyi ifade eder. 
+    // payload, dispatch çağrıldığında kullaniciOlustur fonksiyonuna iletilen veriyi tutar.
+    //Eğer dispatch(kullaniciOlustur({ email: "abc@xyz.com", password: "1234" })) diye bir şey yazarsak,
+    // o zaman payload'da { email: "abc@xyz.com", password: "1234" } verisi bulunur.
+  
+  navigate("/")};
 
   return (
     <Container component="main" maxWidth="xs">
       <Box
+        onSubmit={handleSubmit}
         sx={{
           marginTop: 8,
           display: "flex",
@@ -35,8 +58,7 @@ const Login = () => {
             name="email"
             autoComplete="email"
             autoFocus
-          
-          
+            onChange={(e) => (email = e.target.value)}
           />
           <TextField
             margin="normal"
@@ -46,8 +68,7 @@ const Login = () => {
             label="Password"
             type="password"
             id="password"
-          
-         
+            onChange={(e) => (password = e.target.value)}
           />
 
           <Button
@@ -64,14 +85,14 @@ const Login = () => {
 
       <Typography variant="body2" color="text.secondary" align="center">
         {"Copyright © "}
-        <Link color="inherit" href="https://www.clarusway.com/">
-          Clarusway
+        <Link color="inherit" href="https://github.com/zbaharyilmaz">
+          zbaharyilmaz
         </Link>{" "}
         {new Date().getFullYear()}
         {"."}
       </Typography>
     </Container>
   );
-}
+};
 
-export default Login
+export default Login;

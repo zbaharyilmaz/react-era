@@ -12,29 +12,30 @@ import { useDispatch, useSelector } from "react-redux";
 import { kullaniciOlustur } from "../features/yetkiSlice";
 import { useNavigate } from "react-router-dom";
 
-
 const Login = () => {
- let { email, password } = useSelector((state) => state.yetkiSlice);
+  let { email, password } = useSelector((state) => state.yetkiSlice);
 
-//state redux store'dan gelir.yukadaki kod aslında şu anlama gelir:
-//let email = state.yetkiSlice.email;
-//let password = state.yetkiSlice.password
+  //state redux store'dan gelir.yukadaki kod aslında şu anlama gelir:
+  //*let email = state.yetkiSlice.email;
+  //*let password = state.yetkiSlice.password
 
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-   dispatch(kullaniciOlustur({email, password}))
-    // payload ifadesi, dışarıdan gelen veriyi ifade eder. 
-    // payload, dispatch çağrıldığında kullaniciOlustur fonksiyonuna iletilen veriyi tutar.
-    //Eğer dispatch(kullaniciOlustur({ email: "abc@xyz.com", password: "1234" })) diye bir şey yazarsak,
-    // o zaman payload'da { email: "abc@xyz.com", password: "1234" } verisi bulunur.
-  
-  navigate("/")};
+    dispatch(kullaniciOlustur({ email, password }));
+    navigate("/");
+  };
+
+  //* payload ifadesi, dışarıdan gelen veriyi ifade eder.
+  //? payload, dispatch çağrıldığında kullaniciOlustur fonksiyonuna iletilen veriyi tutar.
+  //*Eğer dispatch(kullaniciOlustur({ email: "abc@xyz.com", password: "1234" })) diye bir şey yazarsak,
+  //? o zaman payload'da { email: "abc@xyz.com", password: "1234" } verisi bulunur.
 
   return (
     <Container component="main" maxWidth="xs">
-      <Box onSubmit={handleSubmit}
+      <Box
+        onSubmit={handleSubmit}
         sx={{
           marginTop: 8,
           display: "flex",

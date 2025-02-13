@@ -1,10 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit'
-import yetkiSlice from '../features/yetkiSlice'
-import haberSlice from '../features/haberSlice'
+import { configureStore } from "@reduxjs/toolkit";
+import yetkiSlice from "../features/yetkiSlice";
+import haberSlice from "../features/haberSlice";
 
-export const store = configureStore({
-    reducer:{
-        yetkislice: yetkiSlice,
-        haberSlice: haberSlice,
-    }
-})
+const store = configureStore({
+  reducer: {
+    yetkiSlice: yetkiSlice, 
+    haberSlice: haberSlice,
+  },
+});
+
+export default store;

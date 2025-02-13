@@ -11,10 +11,14 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { kullaniciOlustur } from "../features/yetkiSlice";
 import { useNavigate } from "react-router-dom";
-import { yetkiSlice } from "../features/yetkiSlice";
+
 
 const Login = () => {
  let { email, password } = useSelector((state) => state.yetkiSlice);
+
+//state redux store'dan gelir.yukadaki kod aslında şu anlama gelir:
+//let email = state.yetkiSlice.email;
+//let password = state.yetkiSlice.password
 
   const navigate=useNavigate();
   const dispatch = useDispatch();
@@ -30,7 +34,7 @@ const Login = () => {
 
   return (
     <Container component="main" maxWidth="xs">
-      <Box
+      <Box onSubmit={handleSubmit}
         sx={{
           marginTop: 8,
           display: "flex",

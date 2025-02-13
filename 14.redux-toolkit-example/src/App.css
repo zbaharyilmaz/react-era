@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+:root {
+  --color-texture-1: #034159;
+  --color-texture-2: #025951;
+  --color-texture-3: #02735e;
+  --color-texture-4: #038c3e;
+  --color-texture-5: #0cf25d;
+  --font-family: 'Rye', cursive;
+}
+
+body {
+    font-family: var(--font-family) !important;
+  }

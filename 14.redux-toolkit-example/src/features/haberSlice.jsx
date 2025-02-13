@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getirData = createAsyncThunk("haber/getirData", async () => {
   const res = await axios(
-    "https://newsapi.org/v2/top-headlines?country=tr&apiKey=3f7b3b7b7b7b4f3b8"
+    "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=a64a7c54deea4bcb851217c8579a155d"
   );
   return res.data.articles;
 });
@@ -12,7 +12,7 @@ export const haberSlice = createSlice({
   name: "haberSlice",
   initialState: {
     haberler: [],
-    loading: true,
+    loading: false,
   },
   reducers: {},
   extraReducers: (builder) => {

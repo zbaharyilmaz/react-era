@@ -8,18 +8,17 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  withTheme,
 } from "@mui/material";
 import { useEffect } from "react";
-import { getirData } from "../features/haberSlice";
+import { fetchNews } from "../features/newsSlice";
 
 const News = () => {
   const dispatch = useDispatch();
 
-  const { loading, haberler } = useSelector((state) => state.haberSlice);
+  const { loading, articles } = useSelector((state) => state.newsSlice);
 
   useEffect(() => {
-    dispatch(getirData());
+    dispatch(fetchNews());
   }, [dispatch]);
 
   return (
@@ -45,25 +44,25 @@ const News = () => {
           justifyContent="space-evenly"
           flexWrap="wrap"
         >
-          {haberler.map((haber) => (
-            <Card key={haber.url} sx={{ maxWidth: 300, height: 500, m: 5, p:1 , display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "0 4px 8px rgba(20, 31, 21, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)", borderRadius: "2px"}}>
+          {articles.map((n) => (
+            <Card key={n.url} sx={{ maxWidth: 300, height: 500, m: 5, p:1 , display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "0 4px 8px rgba(20, 31, 21, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19)", borderRadius: "2px", backgroundColor: "var(--color-texture-7)"}}>
               <CardMedia
                 sx={{ height: 140}}
-                image={haber.urlToImage}
-                title="haber"
+                image={n.urlToImage}
+                title="news"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div" sx={{textAlign: "center", fontSize: "1.09rem", color: "var(--color-texture-3)", fontWeight: "bold", fontFamily: "inherit", padding: "0.5rem"}}> 
-                  {haber.title}
+                  {n.title}
                 </Typography>
                 <Typography variant="body1" sx={{ color: "text.secondary",textAlign:"justify", fontSize: "0.9rem", fontFamily: "inherit"}}>
-                  {haber.content}
+                  {n.content}
                 </Typography>
               </CardContent>
               <CardActions sx={{ display: "flex", justifyContent: "center"}}>
                 <Button sx={{color: "var(--color-texture-4)", fontFamily:"inherit"}} size="small">Clear</Button>
 
-                <Button sx={{color: "var(--color-texture-4)", fontFamily:"inherit"}}  href={haber.url} size="small" target="_blank">
+                <Button sx={{color: "var(--color-texture-4)", fontFamily:"inherit"}}  href={n.url} size="small" target="_blank">
                   Detail
                 </Button>
               </CardActions>

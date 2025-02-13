@@ -9,25 +9,24 @@ import {
   Typography,
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
-import { kullaniciOlustur } from "../features/yetkiSlice";
+import { createUser } from "../features/authSlice";
 import { useNavigate } from "react-router-dom";
 import user from "../assets/user.png";
 
 const Login = () => {
-  let { email, password } = useSelector((state) => state.yetkiSlice);
+  let { email, password } = useSelector((state) => state.authSlice);
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(kullaniciOlustur({ email, password }));
+    dispatch(createUser({ email, password }));
     navigate("/");
   };
 
   return (
     <Container component="main" maxWidth="xs">
       <Box
-        onSubmit={handleSubmit}
         sx={{
           marginTop: 8,
           display: "flex",
@@ -51,7 +50,7 @@ const Login = () => {
         >
           Sign in
         </Typography>
-        <Box component="form" noValidate sx={{ mt: 1 }}>
+        <Box component="form" noValidate sx={{ mt: 1 }} onSubmit={handleSubmit}>
           <TextField
             margin="normal"
             required
@@ -60,6 +59,7 @@ const Login = () => {
             label="Email Address"
             name="email"
             autoComplete="email"
+            placeholder="admin@example.com"
             autoFocus
             onChange={(e) => (email = e.target.value)}
           />
@@ -70,6 +70,7 @@ const Login = () => {
             name="password"
             label="Password"
             type="password"
+            placeholder="12345"
             id="password"
             onChange={(e) => (password = e.target.value)}
           />
@@ -94,7 +95,7 @@ const Login = () => {
         </Box>
       </Box>
 
-      <Typography sx={{ fontFamily:"inherit, color:"var(--color-texture-5)"}} variant="body2" align="center">
+      <Typography variant="body2" color="text.secondary" align="center">
         {"Copyright © "}
         <Link color="inherit" href="https://github.com/zbaharyilmaz">
           zbaharyilmaz

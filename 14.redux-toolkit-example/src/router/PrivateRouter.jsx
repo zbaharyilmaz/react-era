@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux";
-
 import { Navigate, Outlet } from "react-router-dom";
 
 const PrivateRouter = () => {
-  const { email, password } = useSelector((state) => state.yetkiSlice);
-  return email === "admin" && password === "12345" ? (
+  const { email, password } = useSelector((state) => state.authSlice);
+  return email === "admin@example.com" && password === "12345" ? (
     <Outlet />
   ) : (
     <Navigate to="/login" />

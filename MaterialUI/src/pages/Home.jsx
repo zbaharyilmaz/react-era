@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import TextFieldComp from "../components/TextFieldComp";
 import TypoButtons from "../components/TypoButton";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
     <Navbar />
     <TypoButtons />
+    <TextFieldComp />
     </div>
   );
 };

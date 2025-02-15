@@ -20,6 +20,9 @@ importers:
       '@mui/material':
         specifier: ^6.4.4
         version: 6.4.4(@emotion/react@11.14.0(@types/react@19.0.8)(react@19.0.0))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      '@mui/system':
+        specifier: ^6.4.3
+        version: 6.4.3(@emotion/react@11.14.0(@types/react@19.0.8)(react@19.0.0))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react@19.0.0))(@types/react@19.0.8)(react@19.0.0)
       axios:
         specifier: ^1.7.9
         version: 1.7.9

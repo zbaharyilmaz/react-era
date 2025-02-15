@@ -1,10 +1,11 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Avatar, Box, Button, Container, Typography } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 import IconButton from "@mui/material/IconButton";
 import AlarmIcon from "@mui/icons-material/Alarm";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import CalculateIcon from '@mui/icons-material/Calculate';
+import user from "../assets/user.png";
 
 const TypoButtons = () => {
   return (
@@ -65,6 +66,12 @@ const TypoButtons = () => {
           <IconButton color="primary" aria-label="add to shopping cart">
             <CalculateIcon />
           </IconButton>
+        </Box>
+        <Box>
+        <Button variant="contained" sx={{ m: 4, p:3, border:2, borderRadius: 3, borderColor: "warning.main" ,backgroundColor: "red", width: "50%", display: "flex", justifyContent: "center", alignItems: "center"}} color="warning" >
+              SUBMIT
+              <Avatar alt="Cindy Baker" src={user} />
+            </Button>
         </Box>
       </Container>
     </div>

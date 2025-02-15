@@ -37,7 +37,7 @@ function Navbar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" >
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
@@ -55,7 +55,7 @@ function Navbar() {
               textDecoration: "none",
             }}
           >
-            COSTUME WORLD
+            MAKEUP WORLD
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none"} }}>

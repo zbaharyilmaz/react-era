@@ -22,9 +22,9 @@ const CardGrid = () => {
   return (
     <div>
       <Container>
-        <Grid container>
+        <Grid container sx={{padding: 2}}> 
           {products.map((a) => (
-            <Grid item key={a.id}>
+            <Grid item key={a.id} size={{xs:6, md:4}}>
               <Card sx={{ maxWidth: 345, margin: 1, height: 400, padding: 1 }}>
                 <CardMedia
                   component="img"

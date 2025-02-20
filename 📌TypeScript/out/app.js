@@ -40,3 +40,78 @@ var Color;
 })(Color || (Color = {}));
 let selectedColor = Color.green;
 console.log(selectedColor);
+var Role;
+(function (Role) {
+    Role[Role["Admin"] = 1] = "Admin";
+    Role[Role["User"] = 2] = "User";
+    Role[Role["Guest"] = 3] = "Guest";
+})(Role || (Role = {}));
+console.log("Role User", Role.User);
+var statusCode;
+(function (statusCode) {
+    statusCode[statusCode["NotFound"] = 404] = "NotFound";
+    statusCode[statusCode["Success"] = 200] = "Success";
+    statusCode[statusCode["Accepted"] = 202] = "Accepted";
+    statusCode[statusCode["BadRequest"] = 400] = "BadRequest";
+})(statusCode || (statusCode = {}));
+console.log(statusCode.Success);
+var UserRole;
+(function (UserRole) {
+    UserRole["admin"] = "ADMINISTRATOR";
+    UserRole["editor"] = "EDITOR";
+    UserRole["viewer"] = "VIEWER";
+})(UserRole || (UserRole = {}));
+console.log(UserRole.admin);
+var days;
+(function (days) {
+    days["monday"] = "Pazartesi";
+    days["tuesday"] = "Sal\u0131";
+})(days || (days = {}));
+console.log(days.monday);
+console.clear();
+let h = 45;
+h = "Merhaba";
+let veri = "Merhaba";
+console.log(veri.toUpperCase());
+veri = 45;
+let veri1;
+veri1 = "Nasılsın";
+console.log(typeof veri1);
+console.log(veri1.toUpperCase());
+veri1 = 45;
+console.log(typeof veri1);
+console.log(veri1 + 68);
+if (typeof veri1 == "string") {
+    console.log(veri1.toLowerCase());
+}
+veri1 = "Nasılsın";
+console.log(veri1.length);
+function selamla(isim) {
+    console.log(`Merhaba ${isim}`);
+    return;
+}
+selamla("Ömer");
+let a = 45;
+let s;
+s = 45;
+s = "Merhaba";
+s = false;
+function karsila(veri) {
+    if (typeof veri == "string") {
+        console.log("merhaba", veri);
+    }
+    else {
+        console.log("sonuc", veri * veri);
+    }
+}
+karsila("Emre");
+karsila(true);
+let kullaniciAdi = "Zehra";
+let sifre = true;
+let myPet = "Cat";
+let yourPet = 34;
+console.log(yourPet);
+let herPet = "snake";
+let cevap;
+cevap = "Evet";
+cevap = "kararsızım";

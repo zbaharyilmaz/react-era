@@ -86,9 +86,138 @@ enum Color{
 let selectedColor:Color=Color.green
 console.log(selectedColor)
 /* -------------------------------------------------------------------------- */
-// Numaralndırmayıbizde belirleyebileriliz
+// Numaralndırmayı bizde belirleyebileriliz
+enum Role{
+    Admin=1,
+    User,
+    Guest
+}
 
-/* option shift a */
+console.log("Role User",Role.User)
+/* -------------------------------------------------------------------------- */
+enum statusCode{
+    NotFound=404,
+    Success=200,
+    Accepted=202,
+    BadRequest=400
+}
+
+console.log(statusCode.Success)
+/* -------------------------------------------------------------------------- */
+enum UserRole{
+    admin="ADMINISTRATOR",
+    editor="EDITOR",
+    viewer="VIEWER"
+}
+
+console.log(UserRole.admin)
+/* -------------------------------------------------------------------------- */
+enum days{
+    monday="Pazartesi",
+    tuesday="Salı"
+}
+
+console.log(days.monday)
+
+//! ANY
+// Typescipt en esnek veri türü
+// TypeScript'in sıkı tür denetimini devre dışı bırakır
+//  Önceden türü bilinmeyen veriler için kullanılabilir
+console.clear()
+let h:any=45
+h="Merhaba"
+let veri:any="Merhaba"
+console.log(veri.toUpperCase())
+veri=45
+// console.log(veri.toUpperCase())
+/* -------------------------------------------------------------------------- */
+// ! Unknown Veri Türü
+
+let veri1:unknown;
+
+veri1="Nasılsın"
+//Burada unknown, farklı türlerde verileri kabul ediyor. Ancak, doğrudan bir işlem yapmaya kalkarsan hata alırsın.
+console.log(typeof veri1)
+console.log(veri1.toUpperCase())
+
+veri1=45
+console.log(typeof veri1)
+console.log(veri1+68)
 
 
+// Tip kontrolü yapılmalı - yokdaunkonwn ile verilen bir değer işleme sokulamaz
+if (typeof veri1=="string" ){
+    console.log(veri1.toLowerCase())
+}
+// Tip kontrolü 2. yöntem
+veri1="Nasılsın"
 
+console.log((veri1 as string).length)
+
+// ! VOID türü
+// Return ile bir değer döndermeyecek anlamındadır
+// void, bir fonksiyonun herhangi bir değer döndürmediğini belirtmek için kullanılan özel bir türdür.
+// return kullanmazsın veya return; yazarsın, ama değer döndüremezsin.
+// Genellikle  (console.log, alert, event handler vb. kullanılır.
+
+function selamla(isim:string):void{
+    console.log(`Merhaba ${isim}`)
+    return 
+}
+
+selamla("Ömer")
+
+//! UNION  (Birleşim)  Js deki or yapısı 
+
+
+let a :number=45
+// number veya string olabilir
+let s:number | string
+
+s=45
+s="Merhaba"
+s=false
+
+
+/* -------------------------------------------------------------------------- */
+function karsila(veri:string | number){
+
+if (typeof veri=="string"){
+    console.log("merhaba",veri)
+}
+else{
+    console.log("sonuc",veri*veri)
+}
+}
+
+karsila("Emre")
+karsila(true)
+/* -------------------------------------------------------------------------- */
+//! TYPE ALIASES
+
+type name=string;
+
+let kullaniciAdi:name="Zehra"
+
+type kombine=number | string | boolean 
+
+let sifre:kombine=true
+
+/* -------------------------------------------------------------------------- */
+
+// ! String Literal
+
+type Pet="Dog" | "Cat" | "Bird" | "Turtle" | "iguana" | number
+
+let myPet:Pet="Cat"
+let yourPet:Pet=34 
+console.log(yourPet)
+let herPet:Pet="snake"
+
+/* -------------------------------------------------------------------------- */
+type secenekler="Evet" | "Hayır" | "Belki"
+
+let cevap:secenekler
+
+cevap="Evet"
+cevap="kararsızım"

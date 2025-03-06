@@ -13,3 +13,4 @@
 
 6. npx tailwindcss init
 7. npm run dev
+8. npm install @headlessui/react @heroicons/react

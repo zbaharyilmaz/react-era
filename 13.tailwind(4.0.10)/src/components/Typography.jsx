@@ -15,7 +15,7 @@ const Typography = () => {
         <h5 className="text-[80px]">Love Tailwind as 80px</h5>
         <h5 className="text-[4rem]" >Love Tailwind as 4rem</h5>
         <article>
-            <h1 className="text-lg" >LINE CLAMP IS AN AWESOME PROPERTY</h1>
+            <h1 className="text-lg" >LINE CLAMP IS AN AWESOME PROPERTY</h1>  //&LINE CLAMP line-clamp-3
             <p className="line-clamp-3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat minima sequi nisi dignissimos? Assumenda nemo modi distinctio qui obcaecati, quod quam voluptate odit sint in, voluptas aspernatur similique deleniti corporis eveniet inventore! Dolore in, quos consequatur beatae esse dolorum? Dolores ex cupiditate nesciunt aliquid iste modi, amet molestiae accusamus voluptatum excepturi eveniet exercitationem reprehenderit itaque! Error saepe eaque a, totam quod architecto assumenda. Architecto facilis hic quod, voluptatum quisquam autem. Doloremque, quos ea! Molestiae labore vero id, consequuntur laborum debitis! Animi, est, officia, doloribus necessitatibus facere atque vero deleniti adipisci rem non dignissimos ad amet unde quam aut itaque!
             </p>

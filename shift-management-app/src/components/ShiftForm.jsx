@@ -1,51 +1,70 @@
-import { useState } from "react";
-import { useShiftCycle } from "../context/ShiftCycleContext"; // useShiftCycle'ı import et
-import { TextField, Button } from "@mui/material";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  Box,
+  Typography,
+  TextField,
+  Button,
+  Stack
+} from "@mui/material";
+import { useShiftCycle } from "../context/ShiftCycleContext";
 
-function ShiftForm() {
-  const [shift, setShift] = useState({
-    id: "",
-    shiftNumber: "",
-    entryTime: "",
-    exitTime: "",
-  });
+const shiftSchema = z.object({
+  name: z.string().min(1, "Vardiya adı zorunludur"),
+  start: z.string().min(1, "Başlangıç saati zorunludur"),
+  end: z.string().min(1, "Bitiş saati zorunludur"),
+});
 
-  const { handleAddShift } = useShiftCycle(); // context'ten handleAddShift'i al
+const ShiftForm=()=>{
+  const {register, handleSubmit,reset, formState:{errors}}=useForm({resolver: zodResolver(shiftSchema)})
+  const {addShift}= useShiftCycle()
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (shift.shiftNumber && shift.entryTime && shift.exitTime) {
-      handleAddShift(shift);
-      setShift({ id: "", shiftNumber: "", entryTime: "", exitTime: "" });
-    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <TextField
-        label="Shift Number"
-        value={shift.shiftNumber}
-        onChange={(e) => setShift({ ...shift, shiftNumber: e.target.value })}
-        fullWidth
-        required
-      />
-      <TextField
-        label="Entry Time"
-        value={shift.entryTime}
-        onChange={(e) => setShift({ ...shift, entryTime: e.target.value })}
-        fullWidth
-        required
-      />
-      <TextField
-        label="Exit Time"
-        value={shift.exitTime}
-        onChange={(e) => setShift({ ...shift, exitTime: e.target.value })}
-        fullWidth
-        required
-      />
-      <Button type="submit">Add Shift</Button>
-    </form>
-  );
+const onSubmit=(data)=>{
+  addShift(data);
+  reset();
 }
+return(
+  <Box component="form" onSubmit={handleSubmit(onSubmit)} sx={{ mt: 4 }}>
+  <Typography variant="h6" gutterBottom>
+    Yeni Vardiya Ekle
+  </Typography>
+  <Stack spacing={2}>
+    <TextField
+      label="Vardiya Adı"
+      {...register("name")}
+      error={!!errors.name}
+      helperText={errors.name?.message}
+    />
+    <TextField
+      label="Başlangıç Saati"
+      type="time"
+      InputLabelProps={{ shrink: true }}
+      {...register("start")}
+      error={!!errors.start}
+      helperText={errors.start?.message}
+    />
+    <TextField
+      label="Bitiş Saati"
+      type="time"
+      InputLabelProps={{ shrink: true }}
+      {...register("end")}
+      error={!!errors.end}
+      helperText={errors.end?.message}
+    />
+    <Button type="submit" variant="contained">
+      Ekle
+    </Button>
+  </Stack>
+</Box>
 
+)
+
+
+
+}
 export default ShiftForm;
+
+
+
+//ShiftForm’a animasyon / toast 

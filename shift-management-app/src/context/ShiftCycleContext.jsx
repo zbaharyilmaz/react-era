@@ -1,4 +1,6 @@
 import { createContext, useContext, useState } from "react";
+import {mockShifts} from "../data/mockData.js"
+import { mockCycles } from "../data/mockData.js";
 
 const ShiftCycleContext = createContext();
 export const ShiftCycleProvider = ({ children }) => {
